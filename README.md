@@ -126,6 +126,8 @@ app/
 | `npm run build`   | Production build           |
 | `npm run preview` | Preview production build   |
 
+**API URL:** In development, the app uses the Vite proxy to talk to `http://127.0.0.1:8000`. For production, set `VITE_API_URL` in `frontend/.env.production` (e.g. `https://hrsm-project-11zr.onrender.com`). The build then uses that backend.
+
 ### Frontend structure
 
 - `src/components/` – Reusable UI (Button, Input, Card, Table, EmptyState, LoadingSpinner)

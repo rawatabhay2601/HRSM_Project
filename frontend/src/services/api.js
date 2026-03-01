@@ -1,7 +1,8 @@
 import axios from 'axios'
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE ? `${API_BASE}/api` : '/api',
   headers: { 'Content-Type': 'application/json' },
 })
 
@@ -67,7 +68,7 @@ export function deleteAttendance(id) {
 
 // Health (optional)
 export function getHealth() {
-  return axios.get('/health')
+  return API_BASE ? axios.get(`${API_BASE}/health`) : axios.get('/health')
 }
 
 export default api
