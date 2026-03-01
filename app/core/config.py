@@ -22,8 +22,8 @@ class Settings(BaseSettings):
     environment: Literal["development", "staging", "production"] = "development"
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
 
-    # CORS: comma-separated list of origins (e.g. http://localhost:3000,http://localhost:5173)
-    cors_origins: str = "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173,*"
+    # CORS: comma-separated list of origins (e.g. dev servers + production frontend)
+    cors_origins: str = "https://hrsm-frontend.vercel.app"
 
     @property
     def is_sqlite(self) -> bool:

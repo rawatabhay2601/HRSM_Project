@@ -1,7 +1,11 @@
-# Environment
+# Environment and secrets (do not commit)
 .env
-.env.example
 .env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+.env.example
 
 # Python
 venv/
